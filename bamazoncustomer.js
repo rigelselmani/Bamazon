@@ -22,7 +22,7 @@ connection.query("SELECT * FROM products", function (err, res) {
 	inquirer.prompt([{
 		name: "product",
 		type: "input",
-		message: "What is the ID of the product that works best for you? [Changed your mind? Press Y]"
+		message: "What is the ID of the product that works best for you?"
 	},
 	{
 		name: "qty",
@@ -56,9 +56,28 @@ connection.query("SELECT * FROM products", function (err, res) {
 				}
 				else {
 					console.log("-----------------------------------");
-					console.log("Sorry, we do not have enough in stock. \nWe only have " + res[0].StockQuantity + " units of " + ansProd.product + ". \nPlease retry your order. \nThank you!")
+					console.log("Insufficient quantity!");
+					// console.log("Sorry, we do not have enough in stock. \nWe only have " + res[0].StockQuantity + " units of " + ansProd.product + ". \nPlease retry your order. \nThank you!");
+					reprompt();
 				}
 			})
 		}
 	})
 });
+
+function reprompt(){
+	inquirer.prompt([{
+	  type: "confirm",
+	  name: "reply",
+	  message: "Would you like to purchase another item?"
+	}]).then(function(ans){
+	  if(ans.reply){
+		// start();
+		
+	  } else{
+		console.log("See you soon!");
+	  }
+	});
+  }
+  
+//   start();
