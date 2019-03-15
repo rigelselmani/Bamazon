@@ -1,32 +1,32 @@
 DROP DATABASE IF EXISTS bamazon_db;
--- Creates the "bamazon_db --
+
 CREATE DATABASE bamazon_db;
 
--- Makes it so all of the following code will affect animals_db --
 USE bamazon_db;
 
--- Creates the table "products" within bamazon_db --
 CREATE TABLE products (
-  -- Makes a string column called "name" which cannot contain null --
-  ID INT(4) NOT NULL,
-	Product_name VARCHAR(100) NOT NULL,
-	Department VARCHAR(100) NOT NULL,
-	Price DECIMAL(10,2) NOT NULL,
-	Stock INT(20) NOT NULL,
-	PRIMARY KEY (ID)
+	-- Columns
+	ItemID INT NOT NULL AUTO_INCREMENT,
+	ProductName VARCHAR(200) NULL,
+	DepartmentName VARCHAR(200) NULL,
+	Price INT(6) DEFAULT 0,
+	StockQuantity INT (6) NOT NULL,
+  
+  PRIMARY KEY (ItemID)
+);
 
-    );
+select * from products;
 
-Select * FROM products;
+-- 10 sample products
+INSERT INTO products (ProductName, departmentName, price, stockQuantity) values ("Miosoft SOAR DVD", "Miosoft Ed", 12, 5);
+INSERT INTO products (ProductName, departmentName, price, stockQuantity) values ("Starter Architect", "DSA® Suite", 5000, 5);
+INSERT INTO products (ProductName, departmentName, price, stockQuantity) values ("Extended SOAR Pack", "DSA® Suite", 1000, 5);
+INSERT INTO products (ProductName, departmentName, price, stockQuantity) values ("Customization Pack", "Config & Dev", 6000, 5);
+INSERT INTO products (ProductName, departmentName, price, stockQuantity) values ("Extended HR/Payroll", "HR Management", 7000, 5);
+INSERT INTO products (ProductName, departmentName, price, stockQuantity) values ("Runtime SOAR Server", "Databases", 30000, 5);
+INSERT INTO products (ProductName, departmentName, price, stockQuantity) values ("Standard Runtime CAL", "Databases", 50000, 5);
+INSERT INTO products (ProductName, departmentName, price, stockQuantity) values ("Full User License", "Miosoft Ed", 3000, 5);
+INSERT INTO products (ProductName, departmentName, price, stockQuantity) values ("Limited User License", "Miosoft Ed", 300, 5);
+INSERT INTO products (ProductName, departmentName, price, stockQuantity) values ("Self Serve User CAL", "Miosoft Ed", 60, 5);
 
-INSERT INTO products (ID, Product_name, Department, Price, Stock) 
-VALUES (1, "Bed", "Furniture", 799.99, 20),
-	   (101, "Laptop", "Electronics", 499.99, 10),
-	   (201, "Kayak", "Sports", 299.99, 5),
-	   (301, "TV", "Toys", 129.99, 14),
-	   (401, "Trademill", "Sports", 399.9, 15),
-	   (501, "Camry", "Toys", 19.99, 19),
-	   (601, "Cookies", "Food", 4.99, 11),
-	   (701, "Eyelash", "Beauty", 69.99, 10),
-	   (801, "Rice", "Food", 19.99, 19),
-	   (901, "Beer", "Drinks", 19.99, 17)
+SELECT * FROM products;
