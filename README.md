@@ -9,8 +9,13 @@
 
 - The app asks the following things from the user.
 - What is the ID of the product that works best for you?
+-Once the customer has placed the order, the application check if the store has enough of the product to meet the customer's request.
 
-![Screenshot (56)](https://user-images.githubusercontent.com/43711248/54462121-0abd3b80-4745-11e9-8d3a-5edf9e4ca482.png)
+-If not, the app should log a phrase like Insufficient quantity!, and then prevent the order from going through.
+
+-However, if your store does have enough of the product, the app fulfill the customer's order.
+-Once the update goes through, show the customer the total cost of their purchase.-
+
 
 
 
