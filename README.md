@@ -17,6 +17,7 @@
 -Once the update goes through, show the customer the total cost of their purchase.-
 
 
+![Screenshot (56)](https://user-images.githubusercontent.com/43711248/54462121-0abd3b80-4745-11e9-8d3a-5edf9e4ca482.png)
 
 
 - It must be ran in the command line.
