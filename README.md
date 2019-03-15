@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> e068166d3a9f4562d2f3cfa2b44c4a0d4bf102b7
 # Bamazon
 
 ## Introduction
@@ -31,9 +27,4 @@ npm install mysql
 npm install inquirer
 
 
-<<<<<<< HEAD
-=======
  https://rigelselmani.github.io/Bamazon/
-
-
->>>>>>> e068166d3a9f4562d2f3cfa2b44c4a0d4bf102b7
