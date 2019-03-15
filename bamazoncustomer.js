@@ -27,7 +27,7 @@ connection.query("SELECT * FROM products", function (err, res) {
 	{
 		name: "qty",
 		type: "input",
-		message: "You will claim your write-off later, so how many of this product did you have in mind?"
+		message: "So how many of this product did you have in mind?"
 
 	}]).then(function (productObj) {
 		if (productObj.product.toUpperCase() == "Y") {
