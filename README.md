@@ -5,7 +5,9 @@
 - This app takes in orders from customers.
 - The app first displays a list of all of the available products, their costs, and current stock. 
 
-![Screenshot (55)](https://user-images.githubusercontent.com/43711248/54461709-c67d6b80-4743-11e9-9b6f-371e4461cf08.png)
+
+![Screenshot (56)](https://user-images.githubusercontent.com/43711248/54461872-3f7cc300-4744-11e9-8ac2-8fbc84125300.png)
+
 
 - The app asks the following things from the user.
 
